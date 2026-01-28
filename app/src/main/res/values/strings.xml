@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- app_name is defined per flavor in build.gradle.kts -->
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_details">Details</string>
+    
+    <!-- Common -->
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_network">No internet connection. Please check your network.</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading…</string>
+</resources>
