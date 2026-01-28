@@ -92,3 +92,6 @@ lint/tmp/
 # Backup files
 *.bak
 *~
+
+# Claude
+.claude/
