@@ -35,14 +35,10 @@ class CoinRepositoryImpl @Inject constructor(
         try {
             // 1. Emit cached data first (offline-first)
             if (!forceRefresh) {
-                val cachedCoins = coinDao.getAllCoins().map { entities ->
-                    entities.map { it.toDomain() }
-                }
+                val cachedCoins = coinDao.getAllCoinsSync().map { it.toDomain() }
                 
-                cachedCoins.collect { coins ->
-                    if (coins.isNotEmpty()) {
-                        emit(Result.Success(coins))
-                    }
+                if (cachedCoins.isNotEmpty()) {
+                    emit(Result.Success(cachedCoins))
                 }
             }
             
